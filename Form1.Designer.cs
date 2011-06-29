@@ -34,9 +34,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblThBuy = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.lblmtgoxsell = new System.Windows.Forms.Label();
+            this.lblbmsell = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.lblmtgoxbuy = new System.Windows.Forms.Label();
+            this.lblbmbuy = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -89,13 +89,13 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Bitmarket Sell Price : $";
             // 
-            // lblmtgoxsell
+            // lblbmsell
             // 
-            this.lblmtgoxsell.AutoSize = true;
-            this.lblmtgoxsell.Location = new System.Drawing.Point(454, 35);
-            this.lblmtgoxsell.Name = "lblmtgoxsell";
-            this.lblmtgoxsell.Size = new System.Drawing.Size(0, 13);
-            this.lblmtgoxsell.TabIndex = 6;
+            this.lblbmsell.AutoSize = true;
+            this.lblbmsell.Location = new System.Drawing.Point(454, 35);
+            this.lblbmsell.Name = "lblbmsell";
+            this.lblbmsell.Size = new System.Drawing.Size(0, 13);
+            this.lblbmsell.TabIndex = 6;
             // 
             // label4
             // 
@@ -106,13 +106,13 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Bitmarket Buy Price : $";
             // 
-            // lblmtgoxbuy
+            // lblbmbuy
             // 
-            this.lblmtgoxbuy.AutoSize = true;
-            this.lblmtgoxbuy.Location = new System.Drawing.Point(454, 66);
-            this.lblmtgoxbuy.Name = "lblmtgoxbuy";
-            this.lblmtgoxbuy.Size = new System.Drawing.Size(0, 13);
-            this.lblmtgoxbuy.TabIndex = 8;
+            this.lblbmbuy.AutoSize = true;
+            this.lblbmbuy.Location = new System.Drawing.Point(454, 66);
+            this.lblbmbuy.Name = "lblbmbuy";
+            this.lblbmbuy.Size = new System.Drawing.Size(0, 13);
+            this.lblbmbuy.TabIndex = 8;
             // 
             // label5
             // 
@@ -149,7 +149,6 @@
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 12;
             this.textBox3.Text = "http://www.tradehill.com";
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // menuStrip1
             // 
@@ -177,9 +176,9 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.lblmtgoxbuy);
+            this.Controls.Add(this.lblbmbuy);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.lblmtgoxsell);
+            this.Controls.Add(this.lblbmsell);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblThBuy);
             this.Controls.Add(this.label2);
@@ -205,9 +204,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblThBuy;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lblmtgoxsell;
+        private System.Windows.Forms.Label lblbmsell;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lblmtgoxbuy;
+        private System.Windows.Forms.Label lblbmbuy;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;

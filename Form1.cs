@@ -18,8 +18,8 @@ namespace WindowsFormsApplication1
         string content2;
         string thsell;
         string thbuy;
-        string mtgoxbuy;//for use when mtgox decides to fix itself up ;)
-        string mtgoxsell;//same as above.
+        string bmbuy;//for use when mtgox decides to fix itself up ;)
+        string bmsell;//same as above.
         
        // 
         WebClient client = new WebClient();
@@ -33,39 +33,43 @@ namespace WindowsFormsApplication1
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-           
-            content = client.DownloadString(@"https://api.tradehill.com/APIv1/USD/Ticker");
-         
-          string[] split = content.Split(new char [] {'\"'});
-         thsell=(split[5]);
-           lblTradeHillSell.Text = thsell;
-         
-         thbuy = (split[9]);
+            try
+            {
+                content = client.DownloadString(@"https://api.tradehill.com/APIv1/USD/Ticker");
+
+                string[] split = content.Split(new char[] { '\"' });
+                thsell = (split[5]);
+                thbuy = (split[9]);
+            }
+            catch //in case api is inaccessable..
+            {
+                MessageBox.Show("Tradehill data could not be pulled.....setting values to zero instead....");
+                thbuy = "0";
+                thsell = "0";
+            }
+         lblTradeHillSell.Text = thsell;
          lblThBuy.Text = thbuy.ToString();
-      double thsellnum =double.Parse(thsell);//get numbers in proper format for calculations.....
-         double thbuynum = double.Parse(thbuy);
+     // double thsellnum =double.Parse(thsell);for later use....
+    //double thbuynum = double.Parse(thbuy); also for later use...
+         try
+         {
 
-
-
-
-
-
-
-
-         content2 = client.DownloadString(@"https://bitmarket.eu/api/ticker");
-          string[] split2 = content2.Split(new char [] {'\"'});
-         mtgoxbuy = (split2[57]);
-        mtgoxsell = (split2[53]);
-          lblmtgoxsell.Text = mtgoxsell;
-           lblmtgoxbuy.Text = mtgoxbuy;
+             content2 = client.DownloadString(@"https://bitmarket.eu/api/ticker");
+             string[] split2 = content2.Split(new char[] { '\"' });
+             bmbuy = (split2[57]);
+             bmsell = (split2[53]);
+         }
+         catch
+         {
+             MessageBox.Show("bitmarket data could not be pulled.....setting values to zero instead....");
+             bmbuy = "0";
+             bmsell = "0";
+         }
+          lblbmsell.Text = bmsell;
+          lblbmbuy.Text = bmbuy;
 
           //  MessageBox.Show(content2.ToString());
             
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
