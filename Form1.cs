@@ -153,5 +153,10 @@ namespace WindowsFormsApplication1
             lblthsell.Text = thsell;
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PullData();
+        }
     }
 }

@@ -48,6 +48,7 @@
             this.lblthsell = new System.Windows.Forms.Label();
             this.lblthbuy = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -217,11 +218,22 @@
             this.textBox4.TabIndex = 18;
             this.textBox4.Text = "https://tradehill.com";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(515, 195);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(89, 23);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Refresh Data";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(625, 262);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.lblthbuy);
             this.Controls.Add(this.lblthsell);
@@ -243,7 +255,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Bitcoin Price Comparison v 1.2000 by dubbz82";
+            this.Text = "Bitcoin Price Comparison v 1.2010 by dubbz82";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -273,6 +285,7 @@
         private System.Windows.Forms.Label lblthsell;
         private System.Windows.Forms.Label lblthbuy;
         private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button button1;
     }
 }
 
